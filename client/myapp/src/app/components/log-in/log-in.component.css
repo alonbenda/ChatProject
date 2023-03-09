@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    border: solid 1px;
+    width: 80%;
+    background-color: lightblue;
+}
+
+table {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: fit-content;
+}
+
+input {
+    width: 100%;
+}
+
+.app {
+    text-align: center;
+    margin: 0px 40%;
+}

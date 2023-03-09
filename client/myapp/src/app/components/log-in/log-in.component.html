@@ -1,0 +1,42 @@
+<h1>Welcome to the Chat and Game site</h1>
+<br />
+<div class="app">
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="uName">
+                        User Name:
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input required type="text" id="uName" [(ngModel)]="userName" name="username" #username="ngModel"/>
+                </td>
+            </tr>
+            <tr style="color: red;" *ngIf="username.invalid">
+                <td>UserName is required</td>
+            </tr>
+
+            <tr>
+                <label for="pWord">
+                    Password:
+                </label>
+            </tr>
+            <tr>
+                <td>
+                    <input required type="password" id="password" [(ngModel)]="pWord" name="password" #password="ngModel"/>
+                </td>
+            </tr>
+            <tr style="color: red;" *ngIf="password.invalid">
+                <td>Password is required</td>
+            </tr>
+        </table>
+        <br />
+
+        <button (click)="loginUser()">Login</button>
+        <br />
+        <a routerLink="/register">Not registered? Click here!</a>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+.gamehead {
+    height: 33%;
+    border: solid 1px;
+}
+
+h3 {
+    text-align: center;
+}
+
+img {
+    width: 10%;
+}
+
+.gamesbox {
+    display: flex;
+}
+

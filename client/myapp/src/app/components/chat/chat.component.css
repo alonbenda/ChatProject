@@ -1,0 +1,56 @@
+.chatbox {
+    height: 67%;
+    border: solid 1px;
+}
+
+.box {
+    border: solid 1px;
+    background-color: antiquewhite;
+}
+
+.myusernametd {
+    width: 100px;
+    border: solid 1px;
+    background-color: yellow;
+}
+
+.usernametd {
+    width: 100px;
+    border: solid 1px;
+    background-color: aqua;
+}
+
+.mycontenttd {
+    width: 90%;
+    border: solid 1px;
+    background-color: lightcyan;
+}
+
+.usercontenttd {
+    width: 90%;
+    border: solid 1px;
+    background-color: lightgreen;
+}
+
+.timetd {
+    width: 30px;
+    border: solid 1px;
+    background-color: lightgrey;
+}
+
+input {
+    width: 90%;
+}
+
+button {
+    width: 10%;
+}
+
+.gamebox {
+    height: 33%;
+    border: solid 1px;
+}
+
+h3 {
+    text-align: center;
+}

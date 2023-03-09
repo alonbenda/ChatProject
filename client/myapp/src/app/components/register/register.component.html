@@ -1,0 +1,89 @@
+<div class="app">
+    <h2>Register</h2>
+    <form name="registerForm">
+        <table>
+            <tr>
+                <td>
+                    <label for="fName">
+                        First Name:
+                    </label>
+                </td>
+                <td>
+                    <input required type="text" id="fName" [(ngModel)]="newUser.firstName" name="firstName" #firstName="ngModel"/>
+                </td>
+                <td style="color: red;" *ngIf="firstName.invalid">First Name is required</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="lName">
+                        Last Name:
+                    </label>
+                </td>
+                <td>
+                    <input required type="text" id="lName" [(ngModel)]="newUser.lastName" name="lastName" #lastName="ngModel"/>
+                </td>
+                <td style="color: red;" *ngIf="lastName.invalid">Last Name is required</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="uName">
+                        User Name:
+                    </label>
+                </td>
+                <td>
+                    <input required type="text" id="uName" [(ngModel)]="newUser.userName" name="userName" #userName="ngModel"/>
+                </td>
+                <td style="color: red;" *ngIf="userName.invalid">User Name is required</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="password">
+                        Password:
+                    </label>
+                </td>
+                <td>
+                    <input required type="password" id="password" [(ngModel)]="newUser.password" name="password" #password="ngModel"/>
+                </td>
+                <td style="color: red;" *ngIf="password.invalid">Password is required</td>
+            </tr>
+
+            <tr>
+                <td>        
+                    <label for="email">
+                        Email:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" id="email" [(ngModel)]="newUser.email" name="email"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="image">
+                        Picture:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" id="image" [(ngModel)]="newUser.image" name="image"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="description">
+                        Description:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" id="description" [(ngModel)]="newUser.description" name="description"/>
+                </td>
+            </tr>
+        </table>
+
+        <button (click)="addNewUser()">Register</button>
+    </form>
+</div>

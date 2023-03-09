@@ -1,0 +1,22 @@
+<app-sitenavigator [user]="user"></app-sitenavigator>
+<button class="backtochat" routerLink="/chat/{{user.id}}/{{otherUser.id}}">Back to chat</button>
+<div class="header">
+    <h1 class="text-center text-orange "  
+      *ngIf="boardService.isGameRunning"  
+      [ngClass]="{'text-teal': boardService.activePlayer == 'O'}"> 
+      {{ boardService.activePlayer }}'S TURN  
+    </h1>
+    <h1 class="text-center text-grey-darker" *ngIf="!boardService.isGameRunning" >  Tic-Tac-Toe </h1> 
+</div>
+
+<section w-full >
+    <div class="square-container  h-48" *ngFor="let square of boardService.board"> 
+        <app-cell [square]="square" [mainUser]="mainUser" [myUserId]="user.id" [otherUserId]="otherUser.id" border-blue > </app-cell>
+    </div>
+</section>
+
+<h1 class="text-center  text-grey-darker" *ngIf="boardService.winner">{{boardService.activePlayer}} WON </h1>
+    
+<button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded mx-auto block mt-5" *ngIf="boardService.gameOver" (click)="resetGame()">
+       Reset 
+</button>

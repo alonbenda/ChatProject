@@ -1,0 +1,6 @@
+
+<div class="game-square border" 
+    (click)="changePlayer()" 
+    [ngClass]="{noClick: gameService.winner} ">
+    <p class="text-grey-darker"> {{ square.state}} </p>
+</div>

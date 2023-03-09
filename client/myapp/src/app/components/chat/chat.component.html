@@ -1,0 +1,43 @@
+<app-sitenavigator [user]="me"></app-sitenavigator>
+<h1>{{this.user.id? '' : 'The user does not exist'}}</h1>
+<ng-container *ngIf="this.user.id">
+    <div class="chatbox">
+        <h3 class="box">chat with {{user.userName}}</h3>
+    
+        <div *ngFor="let message of messages">
+            <div>
+                <td class="myusernametd" *ngIf="message.userId === this.me.id">
+                    {{myUserName}}
+                </td>
+                <td class="usernametd" *ngIf="message.userId === this.user.id">
+                    {{userUserName}}
+                </td>
+                <td class="mycontenttd" *ngIf="message.userId === this.me.id">
+                    {{message.content}}
+                </td>
+                <td class="usercontenttd" *ngIf="message.userId === this.user.id">
+                    {{message.content}}
+                </td>
+                <td class="timetd">
+                    {{message.timeSent | date:'HH:mm' }}
+                </td>
+                <td class="timetd">
+                    {{message.timeSent | date:'dd/MM/yy' }}
+                </td>
+            </div>
+        </div>
+        <br />
+    
+        <form class="box">
+            <input type="text" name="content" [(ngModel)]="content" placeholder="message" />
+            <button (click)="sendMessage()">Send</button>
+        </form>
+    
+    </div>
+    <br />
+    <br />
+    
+    <div class="gamebox">
+        <app-game [user]="me" [otherUser]="user"></app-game>
+    </div>
+</ng-container>

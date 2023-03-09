@@ -1,0 +1,11 @@
+<app-sitenavigator [user]="me"></app-sitenavigator>
+<div class="app">
+    <h1>{{me.userName}}</h1>
+    <h2>Users Connected:</h2>
+    <br />
+    <ng-container *ngFor="let user of users">
+        <div *ngIf="user.id != me.id && user.loggedIn">
+            <button (click)="goToChatWithUser(user.id)">{{user.userName}}</button>
+        </div>
+    </ng-container>
+</div>
